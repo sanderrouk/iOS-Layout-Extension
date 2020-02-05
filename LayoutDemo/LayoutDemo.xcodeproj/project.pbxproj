@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,8 @@
 		A4033FAB23CA1E8C008CB922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033FAA23CA1E8C008CB922 /* ViewController.swift */; };
 		A4033FB023CA1E8C008CB922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4033FAF23CA1E8C008CB922 /* Assets.xcassets */; };
 		A4033FB323CA1E8C008CB922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4033FB123CA1E8C008CB922 /* LaunchScreen.storyboard */; };
-		A4033FBB23CA1ED9008CB922 /* UIView+PinKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4033FBA23CA1ED9008CB922 /* UIView+PinKit.swift */; };
+		A4B7349A23EB572C00BFD053 /* PinKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4B7349923EB572C00BFD053 /* PinKit */; };
+		A4B7349D23EB577200BFD053 /* UIView+PinKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7349C23EB577200BFD053 /* UIView+PinKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,7 @@
 		A4033FAF23CA1E8C008CB922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4033FB223CA1E8C008CB922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4033FB423CA1E8C008CB922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4033FBA23CA1ED9008CB922 /* UIView+PinKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinKit.swift"; sourceTree = "<group>"; };
+		A4B7349C23EB577200BFD053 /* UIView+PinKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B7349A23EB572C00BFD053 /* PinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +56,7 @@
 		A4033FA523CA1E8C008CB922 /* LayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A4033FBD23CA2A34008CB922 /* Extensions */,
+				A4B7349B23EB576700BFD053 /* Extensions */,
 				A4033FA623CA1E8C008CB922 /* AppDelegate.swift */,
 				A4033FAA23CA1E8C008CB922 /* ViewController.swift */,
 				A4033FAF23CA1E8C008CB922 /* Assets.xcassets */,
@@ -64,10 +66,10 @@
 			path = LayoutDemo;
 			sourceTree = "<group>";
 		};
-		A4033FBD23CA2A34008CB922 /* Extensions */ = {
+		A4B7349B23EB576700BFD053 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A4033FBA23CA1ED9008CB922 /* UIView+PinKit.swift */,
+				A4B7349C23EB577200BFD053 /* UIView+PinKit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -88,6 +90,9 @@
 			dependencies = (
 			);
 			name = LayoutDemo;
+			packageProductDependencies = (
+				A4B7349923EB572C00BFD053 /* PinKit */,
+			);
 			productName = LayoutDemo;
 			productReference = A4033FA323CA1E8C008CB922 /* LayoutDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +121,9 @@
 				Base,
 			);
 			mainGroup = A4033F9A23CA1E8B008CB922;
+			packageReferences = (
+				A4B7349823EB572C00BFD053 /* XCRemoteSwiftPackageReference "PinKit" */,
+			);
 			productRefGroup = A4033FA423CA1E8C008CB922 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,9 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B7349D23EB577200BFD053 /* UIView+PinKit.swift in Sources */,
 				A4033FAB23CA1E8C008CB922 /* ViewController.swift in Sources */,
 				A4033FA723CA1E8C008CB922 /* AppDelegate.swift in Sources */,
-				A4033FBB23CA1ED9008CB922 /* UIView+PinKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4B7349823EB572C00BFD053 /* XCRemoteSwiftPackageReference "PinKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanderrouk/PinKit.git";
+			requirement = {
+				branch = feature/spm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4B7349923EB572C00BFD053 /* PinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4B7349823EB572C00BFD053 /* XCRemoteSwiftPackageReference "PinKit" */;
+			productName = PinKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4033F9B23CA1E8B008CB922 /* Project object */;
 }
